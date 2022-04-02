@@ -33,9 +33,13 @@ const relationship = {
 	name: 'zero',
 	friends: ['nero', 'hero', 'xero'],
 	logFriends: function () {
+		console.log("logFriends 함수 내부의 this");
 		console.log('this1', this);
 		var that = this; // this는 relaionship1객체
 		this.friends.forEach(function (friends, index) { // 콜백함수
+			console.log(
+				"객체 내부의 this"
+			);
 			console.log('this2', this); // this가 global객체가 된다.
 			console.log(that.name, index + '번째 친구', friends);
 		})
