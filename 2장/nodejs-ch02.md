@@ -162,13 +162,14 @@ function(x,y){
 ```
 ### 2.1.4  화살표 함수.
 * arrow function : (매개변수 리스트) =>(소스코드들)
-``` 
+
+```js 
 add2 function(x,y){
   return x+y // 무명의 함수 (annoymous function)
   st add4 - (x,y)=>(x,y);
   const add4 
 ```
-*기존 함숮ㅇ의 방법의 함수와 화살표 함수에서 this 사용시 주의
+* 기존 함수에서의 방법의 함수와 화살표 함수에서 this 사용시 주의
   - 콜백함수의 기존 함수 정의 방법을 정의하면 this는 
   - global객체로 바인딩(binding, 묶는다, 연결) 
   - 콜백 함수를 화살표 함수로 정의하면 this는

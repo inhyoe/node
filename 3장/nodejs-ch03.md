@@ -111,7 +111,7 @@
     - 속성으로만 정의하기 권장.
   - module.exports ==> exports ==> true
 
-@ 노드ㅔㅇ서 this 사용 유의하기
+- 노드에서 this 사용 유의하기
  - 최상위스코프 (anonymous)에서 this : module.exports
  - 함수내의 this : global객체
   - 화살표 함수내의 this는 module.exports객체
