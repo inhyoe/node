@@ -117,7 +117,7 @@ b = 1; // 재할당 가능
     - 객체 리터럴 : {~,~,~~}
 * 객체 리터럴
   - old버전
-```
+```js
 	// old버전의 객체리터럴 선언
 ​
 // old버전의 객체리터럴 선언
@@ -129,7 +129,7 @@ var sayNode = function() {// 함수 선언(정의)
 var es = 'ES객체속성추가';
 var oldObject = { // 객체 리터럴 정의
  // 키:값
-	sayJS: function() { //sayJS90 메소드 정의
+	sayJS: function() { //sayJS 메소드 정의
 		console.log('JS');
  },
  sayNodeMethod: sayNode, //키:값
@@ -142,6 +142,7 @@ oldObject.ES7='사랑해';
 // 추가하려면 변수 처리
 // 이때 사용하는 개념: 객체 <===> 연관배열
 // 연관배열: 배열의 index가 문자열인 배열
+// 추가적으로 리터럴 내의 함수는 메서드이다.
 oldObject.sayNodeMethod(); // Node
 oldObject.sayJS(); // JS
 console.log(oldObject.ES객체속성추가6); // Fantastic
@@ -164,8 +165,8 @@ function(x,y){
 * arrow function : (매개변수 리스트) =>(소스코드들)
 
 ```js 
-add2 function(x,y){
-  return x+y // 무명의 함수 (annoymous function)
+add2 = function(x,y){// 무명의 함수 (annoymous function)
+  return x+y 
   st add4 - (x,y)=>(x,y);
   const add4 
 ```
