@@ -5,10 +5,10 @@ http.createServer(
     (req,res) => { // req : request 객체 res : response객체
         // if(req.url === '/users')
         res.writeHead(200,{'Content-type':'text/html; charset = utf8 '}); // 헤더 
-        res.write('<h1>안녕 일본반 여러분</h1>'); // 클라이언트로 전송, 응답 바디
+        res.write('<h1>Hi Japan Class</h1>'); // 클라이언트로 전송, 응답 바디
         res.write('<h2>2WDJ</h2>'); // 클라이언트로 전송, 응답 바디
-        res.write('<span style = "background-color : orange; color=black"> 안녕 일본반 여러분</span>')
-        res.end('<div>완료</div>'); // (http응답을)바디를 클라이언트로 전송 
+        res.write('<span style = "background-color : orange; color=black">Hi Japan Class</span>')
+        res.end('<div>Success!</div>'); // (http응답을)바디를 클라이언트로 전송 
         // res.end('<p> Hello Server! , </p>');
     }
 ).listen( // 서버 실행 대기
