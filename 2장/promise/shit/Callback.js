@@ -24,7 +24,7 @@ function findAndSaveUser1(Users){
         user.name = 'zero';
         return user.save();
     })
-    .then((user) => users.findOne({gender:'m'}))
+    .then((user) => user.findOne({gender:'m'}))
     .then((user) =>{
 
     })
