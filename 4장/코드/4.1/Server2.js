@@ -1,6 +1,5 @@
 const http = require('http');
-const fs = require('fs').promises;
-
+var fs = require('fs').promises;
 http.createServer(async (req, res) => {
   try {
     const data = await fs.readFile('./Server2.html');

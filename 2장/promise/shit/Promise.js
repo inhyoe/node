@@ -39,6 +39,3 @@ console.log('parent end'); */
     await run()
     console.log('parents end');
 })();
-run2().then(function(){
-    console.log('parent parent start');
-})
