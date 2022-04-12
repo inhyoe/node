@@ -115,8 +115,39 @@ let promise = new Promise((resolve, reject) => {
     }
     };
     // 이 긴줄을
-    let promise = new Promise((resolve, reject)=>{
-        resolve(looadScript())
+    // let promise = new Promise((resolve, reject)=>{
+    //     resolve(looadScript())
+    // })
+
+    let step1 = new Promise((resolve, reject)=>{
+        resolve("step1")
+    })
+    let step2 = new Promise((resolve, reject)=>{
+        resolve("step2")
+    })
+    let step3 = new Promise((resolve, reject)=>{
+        resolve("step3")
     })
 
+    step1.then((resolve) =>{
+      console.log(`${resolve} Success`)
+    }).then((resolve) => {
+      console.log(`${resolve} Success`)
+    }).then((resolve) => {
+      console.log(`${resolve} Success`)
+    })
+```
+
+- 아직도 길다 이걸 해결하기 위해 async await으로 바꿔보자
+```js
+  async /* 선언 */
+  function a(){
+    var ste1 = await step1
+    console.log(ste1)
+    var ste2 = await step2
+    console.log(ste2)
+    var ste3 = await step3
+    console.log(ste3)
+  }
+  a();
 ```

@@ -273,3 +273,4 @@ add2 = function(x,y){// 무명의 함수 (annoymous function)
    - data-변수부분1-변수부분2 :snake-case
   - html의 JS에서 상기 데이터 처리를 위해 dataset으로 접근 가능
    - (js)변수부분1 변수부분2(변수부분2의 첫글자 대문자) : camelCase
+   
