@@ -24,101 +24,106 @@ const time = () => (parseInt(Math.random() * 10) + 1) * 10000;
 //     console.log('제네시스 Go')
 // }
 
-function 아반떼(){
-    return new Promise(resolve =>{
-        setTimeout(() => {
-            resolve("아반테 out");
-          }, 1200);
-          console.log("아반테 go");
-    })
-}
-function 람보르기니(){
-    return new Promise(resolve =>{
-        setTimeout(() => {
-            resolve("람보르기니 out");
-          }, 1200);
-          console.log("람보르기니 go");
-    })
-}
-function 카마로(){
-    return new Promise(resolve =>{
-        setTimeout(() => {
-            resolve("카마로 out");
-          }, 1200);
-          console.log("카마로 go");
-    })
-}
-function 페라리(){
-    return new Promise(resolve =>{
-        setTimeout(() => {
-            resolve("페라리 out");
-          }, 1200);
-          console.log("페라리 go");
-    })
-}
+// function 아반떼(){
+//     return new Promise(resolve =>{
+//         setTimeout(() => {
+//             resolve("아반테 out");
+//           }, 1200);
+//           console.log("아반테 go");
+//     })
+// }
+// function 람보르기니(){
+//     return new Promise(resolve =>{
+//         setTimeout(() => {
+//             resolve("람보르기니 out");
+//           }, 1200);
+//           console.log("람보르기니 go");
+//     })
+// }
+// function 카마로(){
+//     return new Promise(resolve =>{
+//         setTimeout(() => {
+//             resolve("카마로 out");
+//           }, 1200);
+//           console.log("카마로 go");
+//     })
+// }
+// function 페라리(){
+//     return new Promise(resolve =>{
+//         setTimeout(() => {
+//             resolve("페라리 out");
+//         }, 1200);
+//         console.log("페라리 go");
+//     })
+// }
+const 아반떼 = new Promise((resolve) => {
+    setTimeout(() => {
+        resolve("아반테 out");
+    }, 1200); 
+    console.log("아반테 go");
+});
+const 람보르기니 = new Promise((resolve) => {
+    setTimeout(() => {
+        resolve("람보르기니 out");
+    }, 1000);
+    console.log("람보르기니 go");
+});
 
-// const 아반떼 = new Promise((resolve) => {
-//   setTimeout(() => {
-//     resolve("아반테 out");
-//   }, 1200);
-//   console.log("아반테 go");
-// });
-// const 람보르기니 = new Promise((resolve) => {
-//   setTimeout(() => {
-//     resolve("람보르기니 out");
-//   }, 1000);
-//   console.log("람보르기니 go");
-// });
+const 카마로 = new Promise((resolve) => {
+    setTimeout(() => {
+        resolve("카마로 out");
+    }, 1500);
+    console.log("카마로 go");
+});
 
-// const 카마로 = new Promise((resolve) => {
-//   setTimeout(() => {
-//     resolve("카마로 out");
-//   }, 1500);
-//   console.log("카마로 go");
-// });
+const 페라리 = new Promise((resolve) => {
+    setTimeout(() => {
+        resolve("페라리 out");
+    }, 2000);
+    console.log("페라리 go");
+})
 
-// const 페라리 = new Promise((resolve) => {
-//   setTimeout(() => {
-//     resolve("페라리 out");
-//   }, 2000);
-//   console.log("페라리 go");
-// })
+async function a(){
+    const 아반 = await 아반떼;
+    console.log(아반);
+    const 람보 = await 람보르기니;
+    console.log(람보);
+}
+a()
 
-// 아반떼().then(
+// 아반떼.then(
 //     resolve =>{
 //         console.log(resolve);
-//         return 람보르기니();
+//         return 람보르기니;
 //     }
 // ).then(
 //     resolve =>{
 //         console.log(resolve)
-//         return 카마로();
+//         return 카마로;
 //     }
 // ).then(
 //     resolve =>{
 //         console.log(resolve);
-//         return 페라리();
+//         return 페라리;
 //     }
 // ).then(
 //     resolve =>{
 //         console.log(resolve)
+//         console.log('끝');
 //     }
-// ).finally(
-//     console.log('끝');
 // )
 
-(async () => {
-    const 아반떼1 = await 아반떼();
-    console.log(아반떼1);
-    const 람보르기니1 = await 람보르기니();
-    console.log(람보르기니1);
-    const 페라리1 = await 페라리();
-    console.log(페라리1);
-    const 카마로1 = await 카마로();
-    console.log(카마로1 );
-
-})();
-
+// async function a(){
+//     const 아반떼1 = await 아반떼;
+//     console.log(아반떼1);
+//     const 람보르기니1 = await 람보르기니;
+//     console.log(람보르기니1);
+//     const 페라리1 = await 페라리;
+//     console.log(페라리1);
+//     const 카마로1 = await 카마로;
+//     console.log(카마로1);
+// };
+// a();
 
 //(
   // console.log("경기시작")

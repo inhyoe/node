@@ -7,5 +7,5 @@ const array = [Buffer.from('띄엄 '), Buffer.from('띄엄 '), Buffer.from('띄�
 const buffer2 = Buffer.concat(array);
 console.log('concat():', buffer2.toString());
 
-const buffer3 = Buffer.alloc(5); // 5바이트를 확보
+const buffer3 = Buffer.alloc(64); // 5바이트를 확보
 console.log('alloc():', buffer3);

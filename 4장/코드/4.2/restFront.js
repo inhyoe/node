@@ -14,7 +14,7 @@ async function getUser() { // 로딩 시 사용자 가져오는 함수
 
 
       Object.keys(users) // users 데이터에서 키값들의 배열.
-      .map(function (key,index,array) { // **예제 : for:each로 바꿔보자
+      .forEach(function (key,index,array) { // **예제 : for:each로 바꿔보자
         const userDiv = document.createElement('div'); // div태그를 열고 닫는 객체
         const span = document.createElement('span');  // span태그를 열고 닫는 객체
         span.textContent = users[key]; //span태그 안에 user의 key값을 넣어주는 객체 <span>users[12312312](---> 김영진)</span>

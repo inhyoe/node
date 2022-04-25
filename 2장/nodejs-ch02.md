@@ -206,7 +206,7 @@ add2 = function(x,y){// 무명의 함수 (annoymous function)
    - finally(콜백) resolve(),reject()호출되면(모든경우)
     - 콜백의 파라미터: resolve(), reject()의 인자값을 받아내는 매개변수
 
-* 여려개의 비동기 동작이 순서를 지켜서 실행되어야 하는 이유: 콜백지옥
+* 여려개의 비동기 동작이 순서를 지켜서 실행되어야 하는 이유=: 콜백지옥
  - 연속적인 프로미싱 사용 : 프로미스 체이닝
  - 프로미스사용
  - 첫번째 then(콜백)의 콜백에서 프로미스 객체 생성해서 반환
@@ -253,7 +253,7 @@ add2 = function(x,y){// 무명의 함수 (annoymous function)
     - CDN사용
 
 
-### 2.2.2 FromData
+### 2.2.2 FormData
 * html의 form태그 정보를 다루기 쉽게 해주는 객체
   - 동적으로 form 태그의 정보를 제어할 수 있음
   - has(), append(), get(), getAll, set(), delete()
@@ -263,7 +263,7 @@ add2 = function(x,y){// 무명의 함수 (annoymous function)
   - https://www.zeerocho.com/api/search/노드
   - https://www.zeerocho.com/api/search/%EB%85%B*%E*%93%9c
   - 한글 주소 부분을 encodeURIComponent(한글 문자열)처리
-  - encodeURIComponent('노드)
+  - encodeURIComponent('노드')
   - decodeURIComponent('%EB%85%B*%E*%93%9c')
 
 ### 2.2.4 데이터 속성과 dataset

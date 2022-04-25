@@ -8,6 +8,7 @@ console.log('쿼리부분',parsedUrl.query); // 쿼리부분
 const 쿼리부분 = parsedUrl.query
 console.log('쿼리부분 객체화',queryString.parse(parsedUrl.query)); // 객체화
 const 쿼리부분_객체화 = queryString.parse(쿼리부분)
+console.log(queryString.stringify(쿼리부분_객체화));
 console.log('쿼리부분객체화를 문자열로 :',queryString.stringify(queryString.parse(parsedUrl.query)));
 const 쿼리부분_객체화를_문자열로 = queryString.stringify(쿼리부분_객체화)
 
@@ -25,12 +26,12 @@ const 객체_문자열2 = queryString.stringify(문자열_객체);
 
 
 
-console.log(쿼리부분 === 객체_문자열);
-console.log(쿼리부분);
-console.log(객체_문자열);
-console.log(쿼리부분_객체화 === 문자열_객체);
-console.log(쿼리부분_객체화);
-console.log(문자열_객체);
+// console.log(쿼리부분 === 객체_문자열);
+// console.log(쿼리부분);
+// console.log(객체_문자열);
+// console.log(쿼리부분_객체화 == 문자열_객체);  
+// console.log(쿼리부분_객체화);
+// console.log(문자열_객체);
 // console.log(쿼리부분_객체화를_문자열로 == 객체_문자열2);
 
 

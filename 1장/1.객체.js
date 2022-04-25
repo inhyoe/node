@@ -26,3 +26,52 @@ let user = {
 
 let key = "name";
 alert(user.key) // undefined
+
+function a(a,b){
+
+}
+const a = (a,b)=>{}
+step1(function (value1) {
+    step2(function (value2) {
+        step3(function (value3) {
+            step4(function (value4) {
+                step5(function (value5) {
+                    step6(function (value6) {
+                        // Do something with value6
+                    });
+                });
+            });
+        });
+    });
+});
+
+setTimeout(() => {
+    function a(){
+        function b(){
+
+        }
+    } 
+}, timeout);
+var a = 1;
+var a = 2;
+
+let b = 1;
+b = 2;
+
+const step2 = (a,b)=> a+b;
+
+function step2(a,b){
+    return ;
+}
+function (){
+    
+}
+step1((value)=>{
+    (value)=>{
+        (value)=>{
+            (value)=>{
+
+            }
+        }
+    }
+})

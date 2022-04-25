@@ -65,7 +65,7 @@
 
 // ------------------------------
 
-/* 
+
 const formData = new FormData() // 객체 선언
 formData.append('name','김영진') // append는 추가하기
 formData.append('item','🍊')
@@ -80,38 +80,36 @@ formData.getAll('item') // '🍊',🍉 해당 Key의 모든 요소
 
 formData.append('test',['🍔','🥬'])
 formData.get('test') //['🍔','🥬']
+console.log(formData.getAll('item'));
 
 formData.set('item','🍓')
-formData.getAll('item') // 🍓 (덮어쓰기)
- */
+console.log(formData.getAll('item')) // 🍓 (덮어쓰기)
+
 
  //===================================
 
-  // async () => {
-  //   const formData = new FormData();
-  //   formData.append('id', 'JapanIT')
-  //   formData.append('pw', 1234)
-  //   const result = await axios.post('www.zerocho.con/api/post/formdata'),formData
-  //   ;
-  //   console.log(result);
-  //   console.log(result.message);
-  //   console.log(result);
-  // }
-  // cache(err){
-  //   console.error(err)
-  // }();
+  (async () => {
+    // const formData = new FormData();
+    formData.append('id', 'JapanIT')
+    formData.append('pw', 1234)
+    const result = await axios.post('www.zerocho.con/api/post/formdata').formData
+    ;
+    
+    console.log(result);
+    console.log(result.message);
+    console.log(result);
+    
+})();
 
 // =========================
 
 
   (async () => {
-    try {
+    
       const result = await axios.get(`https://www.zerocho.com/api/search/${encodeURIComponent('노드')}`);
       console.log(result);
       console.log(result.data); // {}
-    } catch (error) {
-      console.error(error);
-    }
+
   })();
 
 

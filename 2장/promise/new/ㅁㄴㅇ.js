@@ -49,14 +49,14 @@ step1
   console.log(resolve);
 })
 
-async function a(){
-  const awaitStep1 = await step1;
-  console.log(awaitStep1);
-  const awaitStep2 = await step2;
-  console.log(awaitStep2);
-  const awaitStep3= await step3;
-  console.log(awaitStep3);
-}
+// async function a(){
+//   const awaitStep1 = await step1;
+//   console.log(awaitStep1);
+//   const awaitStep2 = await step2;
+//   console.log(awaitStep2);
+//   const awaitStep3= await step3;
+//   console.log(awaitStep3);
+// }
 
 
 // const step1 = new Promise((resolve, reject) => {
@@ -70,21 +70,21 @@ async function a(){
 //   });
   
   
-//   // step1.then((resolve) => {
-//   //   console.log("Step1 success!");
-//   //   step2.then((resolve) => {
-//   //       console.log("Step2 success!");
-//   //       step3.then((resolve) => {
-//   //         console.log("Step3 success!");
-//   //       }).catch(error =>{
-//   //         console.log(errror);
-//   //       })
-//   //   }).catch(error =>{
-//   //     console.log(error);
-//   //   });
-//   // }).catch(reject =>{
-//   //   console.log(error);
-//   // });
+  // step1.then((resolve) => {
+  //   console.log("Step1 success!");
+  //   step2.then((resolve) => {
+  //       console.log("Step2 success!");
+  //       step3.then((resolve) => {
+  //         console.log("Step3 success!");
+  //       }).catch(error =>{
+  //         console.log(errror);
+  //       })
+  //   }).catch(error =>{
+  //     console.log(error);
+  //   });
+  // }).catch(reject =>{
+  //   console.log(error);
+  // });
 
 //   step1.then((resolve) =>{
 //       console.log(`${resolve} success!`);

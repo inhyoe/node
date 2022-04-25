@@ -1,6 +1,22 @@
 const fs = require('fs').promises;
 const { createContext } = require('fs');
 
+fs.readFile('./readme.txt', (err,data) => {
+    if(err){
+        throw err;
+    }
+    console.log(data);
+    console.log(data.toString());
+
+})
+fs.readFile('./readme.txt') 
+.then((data) =>{
+    console.log(data);
+    console.log(data.toString());
+})
+
+
+
 // const { fstat } = require("fs")
 
 
@@ -16,38 +32,19 @@ const { createContext } = require('fs');
     //         console.log(data.toString());;
     //     }
     // )
-fs.readFile('./readme.txt')
-.then((resolve,reject) => {
-    
-    console.log('1번' , resolve.toString());
-    return resolve
-}).then((resolve,reject) => {
-    console.log('2번' , resolve.toString());
-    return resolve
-}).then((resolve,reject) => {
-    console.log('3번' , resolve);
-})
 // fs.readFile('./readme.txt')
-// .then((data)=>{
-//     console.log(data);
-//     console.log(data.toString());
-// })
-// .catch((err)=>{
-//     console.error(err);
+// .then((resolve,reject) => {
+    
+//     console.log('1번' , resolve.toString());
+//     return resolve
+// }).then((resolve,reject) => {
+//     console.log('2번' , resolve.toString());
+//     return resolve
+// }).then((resolve,reject) => {
+//     console.log('3번' , resolve);
 // })
 
-// (async ()=>{
-//     try{
-//         const data = await fs.readFile('./readme.txt')
-//         console.log(data);
-//         console.log(data.toString());
-//     }
-//     catch(err){
-//         console.error(err);
-//     }
-// })();
-
-//async
+// 
 // (async () =>{
 //     try{
 //         const data = await fs.readFile('./readme.txt')

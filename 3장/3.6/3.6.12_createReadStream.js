@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 const readStream = fs.createReadStream('./readme3.txt', { highWaterMark: 16 });
-const data = [];
+const data = [];// highWaterMark = 버퍼의 크기 
 
 readStream.on('data', (chunk) => {
   data.push(chunk);
