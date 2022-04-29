@@ -4,42 +4,15 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const dotenv = require('dotenv');
 const path = require('path');
-const multer = require('multer');
-const fs = require('fs');
-const nunjucks = require('nunjucks');
-const { Route, Router } = require('express');
-app.set('port',process.env.PORT||3000);
-app.set('view engine','html');
-(req,res)=>{
-  res.send('안녕 노드 익스프레스')
-}
-nunjucks.configure(
-  'views', // view파일의 경로
-  {
-    express : app,
-    watch : true // watch : true -> view 파일의 변경 --> 뷰 엔진이 다시 렌더링
-  },
-);
-
-Router.get(
-  '/viewtest',
-  (req,res,next)=>{
-    res.render(
-      'index',
-      {title : 'express test'}
-    )
-  }
-)
 
 dotenv.config();
 const app = express();
-app.set('port', process.env.PORT || 3001);
+app.set('port', process.env.PORT || 3000);
 
 app.use(morgan('dev'));
 app.use('/', express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-// 이전버전의 express에서는 express.json(),
 app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use(session({
   resave: false,
@@ -52,7 +25,8 @@ app.use(session({
   name: 'session-cookie',
 }));
 
-
+const multer = require('multer');
+const fs = require('fs');
 
 try {
   fs.readdirSync('uploads');
@@ -73,7 +47,7 @@ const upload = multer({
   limits: { fileSize: 5 * 1024 * 1024 },
 });
 app.get('/upload', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, 'multipart.html'));
 });
 app.post('/upload', upload.single('image'), (req, res) => {
   console.log(req.file);

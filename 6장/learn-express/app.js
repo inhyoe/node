@@ -16,6 +16,23 @@ next()
   throw new Error('에러발생시 호출')
 }
   )
+const upload =  multer(
+  {//  옵션객체
+    stoarge:
+    multer.diskStorage({ // disk에 저장
+      destination(req,file,done){ // HDD의 어느 위치로 저장할지
+        done(null,'uploads'); // hdd의 해당 위치값(폴더명)
+      },
+      filename(req,file,done){
+        const ext = path.extname(file.originalname);
+      }
+    })
+    , //저장공간에 대한 옵션
+    limits : {filesize : 5* 1024*1024}//업로드 용량제한(byte단위)
+                                      //5mb까지
+  }
+);
+
   app.use((req,res,next) => {
     console.log('모든 요청에 대해 처리하는 미들웨어 작성');
     // next();
@@ -24,7 +41,7 @@ next()
 
 app.get('/', (req, res) => {
   // res.send('Hello, Express');
-  res.sendFile(path.join(__dirname, './index.html'));
+  res.sendFile(path.join(__dirname, '/index.html'));
   // html이 없어도 send값으로 가능
 });
 
