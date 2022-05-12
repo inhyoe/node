@@ -1,0 +1,25 @@
+{
+  "name": "ch07mywebpage",
+  "version": "0.0.1",
+  "description": "Express, sequelize, nunjucks 이용하기",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemonn app",
+    "start": "nodemon app"
+  },
+  "keywords": [
+    "Express",
+    "sequelize",
+    "nunjucks"
+  ],
+  "author": "C . H . Ryu",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.1",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.3.3",
+    "nunjucks": "^3.2.3",
+    "sequelize": "^6.19.0",
+    "sequelize-cli": "^6.4.1"
+  }
+}

@@ -1,10 +1,28 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>익스프레스 서버</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-  <h1>익스프레스</h1>
-  <p>배워봅시다.</p>
+    {% set test = '#ff0000' %}
+    <h1>({title})</h1>
+    <p>환영합니다. ({title}) 세계로...</p>
+    <button type="submit" class="({title})" >전송</button>
+    <input type="text" placeholder="({title})" 연습하기>
+    <p>{{'<strong>'이스케이프됨'</strong>}}</p>
+    <p>{{'<strong>'이스케이프됨'</strong> | safe}}</p>
+    <ul>
+        {%set fruits = ['사과','키위','오렌지','바나나','파인애플','수박']}
+        {%for fruit in fruits%}
+        <li>{{loop.index}}번째 좋아하는 과일 : {{fruit}}</li>
+        {%endfor%}
+    </ul>
+    {%set isLoggedIn%}
+    {%if isLoggedIn %}
+        <div>로그인 성공</div>
+    {}
 </body>
 </html>
